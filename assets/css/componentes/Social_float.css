@@ -1,0 +1,40 @@
+.Social_float {
+    color: var(--color-white);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-medium);
+}
+.Social_float__icon,
+.Social_float ul li {
+    background-color: var(--color-green);
+    font-size: 20px;
+    width: fit-content;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Social_float ul {
+    display: flex;
+    flex-direction: column;
+}
+.Social_float ul li {
+    margin-bottom: -15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-medium);
+}
+/* hover  */
+.Social_float:hover ul li {
+    margin-bottom: 0px;
+    opacity: 1;
+    pointer-events: all;
+}
+.Social_float ul li:hover {
+    background: var(--color-green-1);
+}

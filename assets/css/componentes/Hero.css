@@ -1,0 +1,58 @@
+.Hero {
+    height: clamp(520px, 60vh, 720px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 4rem 3rem;
+    overflow: hidden;
+}
+
+.Hero__title {
+    font-family: var(--font-family-title);
+    font-weight: 800;
+    font-size: clamp(70px, 60px + 3vw, var(--font-h1));
+    color: var(--color-white);
+    -webkit-text-stroke: 1px #000000;
+    max-width: 525px;
+}
+
+.Hero__text {
+    max-width: 90%;
+    font-size: var(--text-heigh);
+    color: var(--color-white);
+}
+/* el backround esta en el Bg_media.css  */
+
+.My_breadcrumb {
+    display: flex;
+    padding: 1rem;
+}
+.My_breadcrumb li,
+.My_breadcrumb li::before {
+    color: var(--color-white) !important;
+    font-weight: 700;
+    font-size: var(--text-medium) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .Hero__title {
+        width: 100%;
+        white-space: inherit;
+    }
+}
+@media screen and (max-width: 576px) {
+    .Hero {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .Hero__text {
+        max-width: 100%;
+    }
+    .Hero__title {
+        font-size: var(--font-h1);
+    }
+    .My_breadcrumb {
+        justify-content: center;
+    }
+}

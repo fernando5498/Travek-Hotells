@@ -1,0 +1,44 @@
+.Title {
+    position: relative;
+    padding-left: 20px;
+}
+.Title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(180deg, var(--color-green) 0%, var(--color-green-3) 100%);
+}
+.Title__h2 {
+    color: var(--color-green);
+    position: relative;
+}
+.Title__h3 {
+    color: var(--color-gray);
+    position: relative;
+}
+
+.Title--white .Title__h2,
+.Title--white .Title__h3 {
+    color: var(--color-white);
+}
+.Title--white::after {
+    background: linear-gradient(180deg, var(--color-white) 0%, rgba(255, 255, 255, 0.336) 100%);
+}
+
+@media screen and (max-width: 768px) {
+    .Title {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Title {
+        text-align: center;
+    }
+    .Title::after {
+        display: none;
+    }
+}

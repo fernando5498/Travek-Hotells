@@ -1,0 +1,210 @@
+.plans_container {
+    display: flex;
+}
+.plan_card {
+    width: 370px;
+    min-height: 602px;
+    position: relative;
+    transition: var(--transition-medium);
+    color: var(--color-white);
+    overflow: hidden;
+    border: 5px solid var(--color-white);
+}
+
+.plan_card__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-medium);
+}
+.plan_card__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.plan_card__image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.15;
+    transition: var(--transition-medium);
+}
+/* contetnt  */
+.plan_card_content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+.plan_card_content::before {
+    content: "";
+    position: absolute;
+    transform: scale(0.6);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: var(--transition-medium);
+    border: 5px solid var(--color-white);
+}
+.plant_card_front {
+    opacity: 1;
+    text-align: center;
+    transition: var(--transition-medium);
+}
+
+.plan_card_content__h3 {
+    font-size: var(--font-h1);
+    font-weight: 700;
+}
+.plan_card_content__h5 {
+    font-size: var(--font-h3);
+    font-weight: 700;
+}
+.plant_card_back {
+    position: absolute;
+    transition: var(--transition-medium);
+    opacity: 0;
+    text-align: center;
+}
+.plan_card_content__list {
+    margin-bottom: 1rem;
+}
+.plan_card_content__list li {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: calc(0.7rem, 0.5rem + 1vw, var(--text-medium));
+}
+.plan_card__price {
+    padding: 0.5rem 1rem;
+    background: var(--color-green);
+    font-size: calc(var(--font-h2) - 2px);
+    font-weight: 700;
+}
+.plan_card_time {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-size: var(--text-heigh);
+    font-weight: 700;
+}
+.plan_card_time::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 9px;
+    transition: var(--transition-medium);
+    background: var(--color-green);
+}
+.plan_card_time span {
+    position: relative;
+}
+
+/* hover  */
+
+.plan_card:hover .plan_card_content::before {
+    opacity: 1;
+    transform: scale(0.8);
+}
+.plan_card:hover .plant_card_front {
+    opacity: 0;
+}
+.plan_card:hover .plant_card_back {
+    opacity: 1;
+}
+.plan_card:hover .plan_card_time::before {
+    width: 100%;
+}
+.plan_card:hover .plan_card__image::before {
+    opacity: 0.4;
+}
+.plan_card:hover .plan_card__image {
+    transform: scale(1.2);
+}
+@media screen and (max-width: 992px) {
+    .plans_container {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .plan_card_content__h3 {
+        font-size: 3rem;
+    }
+    .plan_card_content__h5 {
+        font-size: 1.5rem;
+    }
+    .plan_card {
+        min-height: 350px;
+        width: 100%;
+    }
+    .plan_card_content::before {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+}
+
+/* last_offers  */
+.bg-gray {
+    background-color: var(--color-gray-2);
+}
+.last_offers_carousel .owl-nav.disabled + .owl-dots.owl-dots {
+    transition: var(--transition-medium);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.Card_package .Card_seller__icon {
+    bottom: 0;
+    top: auto;
+    z-index: 1;
+}
+.last_offers_carousel .Card_package_back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    opacity: 0;
+    transition: var(--transition-medium);
+    font-weight: 300;
+    text-align: center;
+}
+
+.Card_package__image::after,
+.Card_package__time h4 {
+    transition: var(--transition-medium);
+}
+/* hover  */
+.last_offers_carousel .Card_package:hover .Card_package_back {
+    opacity: 1;
+}
+.last_offers_carousel .Card_package:hover .Card_package__time h4 {
+    opacity: 0;
+}
+.last_offers_carousel .Card_package:hover .Card_package__time {
+    opacity: 0;
+}
+.last_offers_carousel .Card_package:hover .Card_package__image::after {
+    opacity: 0.5;
+}
+.Card_package__price {
+    color: var(--color-white);
+    font-size: var(--text-heigh);
+    position: absolute;
+    bottom: 0;
+    padding: 0.4rem 1rem;
+    background-color: var(--color-green);
+}

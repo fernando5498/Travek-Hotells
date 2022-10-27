@@ -1,0 +1,93 @@
+/* -------------------- PAGE ABOUT US ------------------- */
+/* -------------------- PAGE ABOUT US ------------------- */
+
+.about_travel_hotells {
+    position: relative;
+    background: var(--color-gray-2);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.row_about {
+    height: 70vh;
+    max-height: 450px;
+}
+.about_travel_hotells__text {
+    font-size: var(--text-medium);
+    color: var(--color-gray);
+}
+.about_travel_hotells__image {
+    height: 100%;
+    width: 100%;
+}
+.about_travel_hotells__image img {
+    height: 100%;
+    object-fit: cover;
+}
+.about_travel_hotells_1 {
+    background-color: var(--color-white);
+}
+.about_travel_hotells_1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../image/BACKGROUND_EST_SELLERS.png);
+    opacity: 0.08;
+    z-index: -1;
+    background-attachment: fixed;
+}
+.about_travel_hotells--green .about_travel_hotells__text {
+    color: var(--color-white);
+}
+@media screen and (max-width: 992px) {
+    .row_about {
+        height: auto;
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .row_about {
+        text-align: center;
+    }
+}
+
+/* mission  */
+.grid_mission {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.mission_item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 50px 20px;
+    background: var(--color-gray-2);
+    align-items: center;
+    text-align: center;
+}
+.mission_item__icon {
+    font-size: 3.5rem;
+    color: var(--color-green);
+}
+.mission_item__title {
+    color: var(--color-green);
+}
+.mission_item__text {
+    color: var(--color-gray);
+}
+
+.mission_image {
+    width: 100%;
+    height: 100%;
+}
+
+.mission_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

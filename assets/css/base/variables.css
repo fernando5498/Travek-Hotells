@@ -1,0 +1,37 @@
+/* ----------------------- COLORS ----------------------- */
+/* ---------------- TEXTOS ------------------- */
+:root {
+    /* text  */
+    --font-h1: 6.25rem;
+    --font-h2: 1.5625rem;
+    --font-h3: 1.875rem;
+    --font-h4: 1.75rem;
+    --text-heigh: 1.25rem;
+    --text-medium: 1rem;
+    --font-family-title: "Noto_sans";
+    --font-family-text: "Roboto";
+    /* colors  */
+    --color-green-dark: #143100;
+    --color-green: #04541f;
+    --color-green-1: #00862e;
+    --color-green-3: #0eaa4361;
+    --color-yellow: #d88100;
+    --color-yellow-1: #ee940e;
+    --color-gray: #6c6c6c;
+    --color-gray-1: #a5a3a3;
+    --color-gray-2: #efefef;
+    --color-white: white;
+    --color-body: white;
+    /* transitions  */
+    --transition-slow: 800ms;
+    --transition-medium: 600ms;
+    --transition-fast: 300ms;
+    /* glasss  */
+    --glass-color: #ffffff69;
+    --glass-filter: blur(5px);
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --font-h1: clamp(3rem, 1.9rem + 5.5vw, 4.6875rem);
+    }
+}

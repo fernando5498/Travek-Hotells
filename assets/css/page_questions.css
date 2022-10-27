@@ -1,0 +1,113 @@
+/* ------------------- .ANSWER_SECTION ------------------ */
+.answer_section {
+    position: relative;
+    background-color: var(--color-gray-2);
+}
+.answer_items_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.answer_item {
+    padding: 25px 15px;
+    text-align: center;
+    background: var(--color-white);
+}
+.answer_item__icon {
+    font-size: 3.5rem;
+    color: var(--color-green);
+}
+.answer_item__title {
+    color: var(--color-green);
+}
+.answer_item__text {
+    color: var(--color-gray);
+}
+/* --------------------- answer_section_1 -------------------- */
+
+.answer_section_1 {
+    /* background: var(--color-gray-2); */
+}
+.answer_image {
+    width: 100%;
+    height: 100%;
+}
+.answer_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item_answer {
+    background: var(--color-gray-2);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.item_answer__header {
+    color: var(--color-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item_answer__header h2 {
+    font-size: clamp(1.2rem, 0.5rem + 1vw, 1.5rem);
+    font-weight: 500;
+}
+.item_answer__header svg {
+    font: 20px;
+    transform: rotate(180deg);
+    transition: var(--transition-medium);
+}
+.item_answer__body {
+    color: var(--color-gray);
+    height: 0;
+    transition: var(--transition-medium);
+    overflow: hidden;
+}
+.item_answer__body p {
+    margin: 0;
+}
+/* .answer_item active */
+.item_answer.active .item_answer__header svg {
+    transform: rotate(0deg);
+}
+/* ----------------- .FREQUENT_QUESTIONS ---------------- */
+
+.frequent_questions {
+    position: relative;
+}
+.question_items_container li:nth-child(odd) {
+    float: left;
+    clear: right;
+}
+.question_items_container li:nth-child(even) {
+    float: right;
+    clear: left;
+}
+
+.question_item {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: 1rem 1.5rem;
+    max-width: 398px;
+    margin-bottom: 1.5rem;
+}
+.question_item_text p {
+    margin: 0;
+}
+.video_glass {
+    position: relative;
+}
+
+.video_glass video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 576px) {
+    .question_item {
+        text-align: center;
+    }
+}

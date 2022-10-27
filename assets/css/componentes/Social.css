@@ -1,0 +1,90 @@
+.social_wrapper {
+    background: rgba(4, 84, 31, 0.68);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 47px;
+    padding: 40px 0px;
+}
+.social_wrapper .Social_bar {
+    width: 100%;
+    gap: 0;
+}
+.social_wrapper .Social_bar li,
+.social_wrapper .Social_bar li a {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    transition: 300ms all;
+}
+
+.social_wrapper .Social_bar li:hover {
+    background-color: var(--color-green-1);
+}
+.Social_bar {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 1rem;
+    align-items: center;
+}
+.Social_bar a {
+    color: var(--color-white);
+    font-size: 20px;
+    opacity: 0.5;
+    transition: 300ms all;
+}
+.Social_bar a:hover {
+    opacity: 1;
+}
+.social_wrapper .button-redes {
+    font-family: var(--font-family-text);
+    font-weight: 700;
+    font-size: var(--text-heigh);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: var(--color-white);
+    transition: 300ms all;
+    opacity: 0.5;
+    user-select: none;
+}
+.social_wrapper .button-redes:hover {
+    opacity: 1;
+}
+.Social_bar--green {
+    display: flex;
+}
+.Social_bar--green a {
+    color: var(--color-gray);
+    opacity: 1;
+}
+.Social_bar--green a:hover {
+    color: var(--color-green);
+}
+@media screen and (max-width: 768px) {
+    .social_wrapper {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+        justify-content: center;
+    }
+    .social_wrapper .button-redes {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Social_bar {
+        justify-content: center;
+    }
+}
